@@ -1,0 +1,525 @@
+/* cart 
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,800");
+
+.Cart {
+  max-width: 800px;
+  display: block;
+  margin: auto;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+}
+
+.Cart ul {
+  list-style-type: none;
+}
+
+.Cart li {
+  max-width: 400px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+.Cart li, .Cart button {
+  margin-right: 10px;
+}
+
+.Cart button {
+  cursor: pointer;
+  float: right;
+  border: none;
+  border-radius: 4px;
+  background: #D8D8D8;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  transform: translatey(-5px);
+}
+
+.cartTotal {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  color: #0e5c2c;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  background: #a2bb98;
+  border: 10px solid #0e5c2c;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
+  border-radius: 6px 0 0 0;
+  padding: 10px 20px;
+}
+
+.cartColor {
+  min-width: 90px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
+}
+
+.cartColorQty,
+.cartColorImport {
+  width: 80px;
+  float: right;
+}
+
+.wall {
+  
+  max-width: 800px;
+  display: block;
+  margin: auto;
+  padding-top: 60px;
+}
+
+.brick {
+  margin: 20px;
+  height: 180px;
+  width: 150px;
+  margin-bottom: 1em;
+  clear: both;
+  background: #fff;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.brick:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.color {
+  grid-area: color;
+  position: relative;
+  height: 120px !important;
+}
+
+.content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+  grid-template-areas:
+    ". color ."
+    ". action .";
+}
+
+.action {
+  grid-area: action;
+
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.action p {
+  font-weight: 800;
+  margin: auto;
+}
+
+.buyButton {
+  cursor: pointer;
+
+  font-weight: 800;
+  color: #fff;
+
+  width: 68px;
+  height: 25px;
+  background: linear-gradient(270deg, #ff3d00 -13.97%, #ffa800 105.15%);
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: none;
+
+  position: relative;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  transition: box-shadow 0.2s;
+}
+
+.color h1 {
+  position: absolute;
+  z-index: 2;
+
+  font-size: 46px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -100%);
+}
+
+.palette {
+  position: absolute;
+  height: 140px;
+  width: 140px;
+  left: 5px;
+  top: -10px;
+
+  background: #fdff8d;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+.navBar {
+  position: fixed;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  text-align: right;
+  right: 0;
+  top: 0;
+  background: #fff;
+  z-index: 999;
+
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 0 6px;
+}
+
+.navBar li {
+  position: relative;
+  display: inline-block;
+  padding-right: 50px;
+  cursor: pointer;
+}
+
+.navBar li:hover {
+  font-style: italic;
+}
+
+.cartQuantity {
+  padding: 0px 5px;
+  border-radius: 6px;
+  color: #000;
+  background: linear-gradient(270deg, #ff3d00 -13.97%, #ffa800 105.15%);
+}
+
+/* cart */
+.pnrSearchButton{
+  right: 48px;
+}
+.hero-header {
+    background: url(../images/bg-dot.png), url(../images/bg-dot.png), url(../images/bg-round.png), url(../images/bg-tree.png), url(../images/bg-bottom-hero.png);
+    background-position: 10px 10px, bottom 190px right 10px, left 55% top -1px, left 55% bottom -1px, center bottom -1px;
+    background-repeat: no-repeat;
+}
+.show-food{
+    background:  url(../images/bg-dot.png), url(../images/bg-dot.png), url(../images/bg-round.png), url(../images/bg-tree.png);
+    background-position: 10px 10px, bottom 190px right 0px, left 55% top -1px, left 55% bottom -1px, center bottom -1px;
+    background-repeat: no-repeat;
+}
+.station-search{
+    background: url(../images/bg-top-hero.png), url(../images/bg-dot.png), url(../images/bg-dot.png), url(../images/rail_at_station.png);
+    background-position: 1px 140px, bottom 190px right 10px, left 55% top 10px, left 45% bottom -1px, center bottom -1px;
+    padding-bottom: 170px !important;
+    background-repeat: no-repeat;
+}
+.bg-area{
+    background: url(../images/bg-top.png), url(../images/bg-bottom.png), #0debb1;
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+}
+.rounded-edge{
+    border-radius: 20px !important;
+    /* box-shadow: 0px 0px 10px #666; */
+}
+ /* menu */
+ .border-menu{
+    margin-top: 5px solid #fff !important;
+
+}
+/* menu */
+ /* Service  */
+.service-item {
+    position: relative;
+    /* height: 350px; */
+    /* padding: 30px 25px; */
+    color: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item:hover {
+    box-shadow: 0px 0px 10px #666;
+    background: var(--primary);
+}
+
+.service-item .service-icon {
+    margin: 0 auto 20px auto;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: var(--light); */
+    background: url(../images/icon-shape-primary.png) center center no-repeat;
+    transition: .5s;
+}
+
+.service-item:hover .service-icon {
+    
+    background: url(../images/icon-shape-white.png);
+}
+
+.service-item-more {
+    position: relative;
+    /* height: 350px; */
+    /* padding: 30px 25px; */
+    color: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+/* .service-item-more:hover {
+    box-shadow: 0px 0px 10px #666;
+    background: var(--primary);
+} */
+
+.service-item-more .service-icon-more {
+    margin: 0 auto 20px auto;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: var(--light); */
+    background: url(../images/icon-shape-white.png) center center no-repeat;
+    transition: .5s;
+}
+
+/* .service-item-more:hover .service-icon-more {
+    
+    background: url(../images/icon-shape-white.png);
+} */
+
+.service-item h5,
+.service-item p {
+    transition: .5s;
+}
+
+.service-item:hover h5,
+.service-item:hover p {
+    color: var(--light);
+}
+
+.service-item a.btn {
+    position: relative;
+    display: flex;
+    color: var(--primary);
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item:hover a.btn {
+    color: var(--primary);
+}
+
+.service-item a.btn::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-radius: 35px;
+    background: #DDDDDD;
+    transition: .5s;
+    z-index: -1;
+}
+
+.service-item:hover a.btn::before {
+    width: 100%;
+    background: var(--light);
+}
+ /* Service  */
+ /* reg_owner */
+ .reg_owner{
+     background-image: linear-gradient(to right, #8000FF,#DE00FF);
+ }
+ /* reg_owner */
+ /*** Footer ***/
+.footer {
+    background: url(../images/footer.png) center center no-repeat;
+    background-size: contain;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid rgba(256, 256, 256, .1);
+    border-radius: 40px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: left;
+    color: var(--light);
+    font-weight: normal;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 14px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+/* footer */
+.bg-color{
+    /* background-color: #FCE77D; */
+    background-color: #FFF748;
+    /* background-color: #CCF381; */
+    /* background-color: #4831D4; */
+}
+.text-color{
+    /* color: #CCF381 !important; */
+    color: #4831D4 !important;
+}
+.opacity-80{
+    opacity: 80%;
+}
+.opacity-100{
+    opacity: 100%;
+}
+.navstyle{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.logo{
+    width: 60%;
+}
+.label-bg{
+    background-color: #81deea;
+    background-image: url(../images/clouds.png);
+    height: 200px;
+}
+.restaurant-bg{
+    background-color: #81deea;
+    /* background-image: url(../images/clouds.png); */
+    height: 20px;
+}
+.label-food{
+    position: absolute;
+    top: 30%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+.station-img{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    width: 160px;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+}
+.banner-row{
+    /* background-image: radial-gradient(#4831D4, #0077b6, #00b4d8); */
+    background-color: #81deea;
+    /* background-color: #8AAAE5; */
+}
+.banner{
+    /* background-image: url(../images/banner1.png); */
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.banner-body {
+    text-align: center;
+    color: white;
+    margin: auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+   
+  }
+  .bg-restaurants{
+    background:  #0debb1;
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+  }
+.restaurants img{
+    border-radius: 20px;
+}
+
+.restaurants{
+    border-radius: 20px;
+    border: none;
+    padding: 0px;
+}
+.restaurants:hover{
+    box-shadow: 0px 0px 10px #666;
+}
+@media screen and (max-width: 495px){
+	.navstyle {
+        padding: 0%;
+    }
+    
+}
+@media screen and (max-width: 375px){
+    .navbrand{
+        padding: 0%;
+        margin: 0%;
+        width: 80%;
+    }
+    .label-food{
+        /* position: absolute; */
+        top: 20.2%;
+        left: 38%;
+        transform: scale(.7,.7);
+    }
+    .station-img{
+        padding: 8px;
+        width: 35%;
+        position: absolute;
+        top: 27.5%;
+        left: 8%;
+    }
+}

@@ -1,0 +1,18 @@
+.mystyle  {
+    padding: "10px";
+    border-Radius: "25px";
+    box-Shadow: "0 20px 20px #737dc1";
+    background-Color: "#f0f3fe";
+    border-Top: "3px solid #fff";
+    border-Left: "3px solid #e6e6e6";
+    border-Bottom: "7px solid #ced2f4";
+};
+.mystyle:hover  {
+    padding: "10px";
+    border-Radius: "25px";
+    box-Shadow: "0 20px 20px #737dc0";
+    background-Color: "#f0f3fe";
+    border-Top: "3px solid #fff";
+    border-Left: "3px solid #e6e6e6";
+    border-Bottom: "7px solid #ced2f4";
+};

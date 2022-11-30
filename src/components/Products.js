@@ -3,6 +3,8 @@ import { CartState } from '../context/Context';
 import SingleProduct from './SingleProduct';
 import '../css/style.css';
 import Filters from './Filters';
+import Header from './Header/Header';
+import { Container } from 'react-bootstrap-v5';
 
 
 const Products = () => {
@@ -13,6 +15,8 @@ const Products = () => {
     console.log(products);
 
   return (
+    <div>
+        <Header/>
     <div className='products'>
         <Filters/>
         <div className='productContainer'>
@@ -23,6 +27,7 @@ const Products = () => {
             }
 
         </div>
+    </div>
     </div>
   )
 }

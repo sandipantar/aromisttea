@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../../img/AROMIST_LOGO.png'
 import '../css/style.css';
-import { Nav, Form, FormControl, Button, Navbar, Container, NavDropdown,navbarScroll, Badge, Dropdown } from "react-bootstrap-v5";
+import { Nav, Form, FormControl, Button, Navbar, Container, NavDropdown,navbarScroll, Badge, Dropdown, Toast, DropdownButton } from "react-bootstrap-v5";
 import '../css/style.css';
 import { FaShoppingCart } from 'react-icons/fa';
+import { CartState } from '../../context/Context';
+import { AiFillDelete } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import '../../css/style.css';
 
 const Header = (props) => {
+    const {
+        state:{ cart},
+        dispatch
+    } = CartState();
+
     const loggedIn = localStorage.getItem('loggedin');
     // const scrollFunction = function () {
     //     // scrollFunction()
@@ -137,17 +146,55 @@ const Header = (props) => {
                             />
                         </Form>
                         <Nav>
-                         <Dropdown alignright="true">
-                             <Dropdown.Toggle variant="success" id="dropdown-basic">
+                         <Dropdown>
+                             <Dropdown.Toggle variant="success">
                                  {/* <i class="fa fa-shopping-bag" aria-hidden="true"></i> */}
                                  <FaShoppingCart color='white' fontSize="20px"/>
-                                 <Badge> {10}</Badge>
+                                 <Badge> {cart.length}</Badge>
                              </Dropdown.Toggle>
 
-                             <Dropdown.Menu style={{minWidth:'370px'}}>
+                             <Dropdown.Menu className="dropdown-menu-right">
                                  {/* <Dropdown.Item href="#/action-1">Action</Dropdown.Item> */}
-                                 <span style={{padding:'10px'}}>Cart is Empty!</span>
-                                 </Dropdown.Menu>
+                                 { cart.length>0?(
+                                    <>
+                                    {
+                                        cart.map(prod => (
+                                            <Toast className='cartItem' key={prod.id}>
+                                                <Toast.Body>
+                                                    <img
+                                                    src={prod.image}
+                                                    className="cartItemImg float-start rounded me-2"
+                                                    alt={prod.name}
+                                                    />
+                                                    <div className='cartItemDetail float-start'>
+                                                        <strong className="me-auto">{prod.name}</strong><br/>
+                                                        <span className="me-auto">₹ {prod.price.split(".")[0]}</span>
+                                                    </div>
+                                                    <div className='float-end'>
+                                                    <AiFillDelete
+                                                        className=''
+                                                        fontSize="18px"
+                                                        style={{cursor: "pointer"}}
+                                                        onClick={()=>
+                                                            dispatch({
+                                                                type: "REMOVE_FROM_CART",
+                                                                payload: prod,
+                                                            })
+                                                        }
+                                                    />
+                                                    </div>
+                                                </Toast.Body>
+                                            </Toast>
+                                        ))}
+                                        <Link to="/cart">
+                                            <Button className='bg-dark-green cartList-button'>Go to cart</Button>
+                                        </Link>
+                                    </>
+                                 ):(
+                                    <span style={{padding:'10px'}}>Cart is Empty!</span>
+                                 )}
+                                 
+                             </Dropdown.Menu>
                          </Dropdown>
                          </Nav>
                         </Navbar.Collapse>

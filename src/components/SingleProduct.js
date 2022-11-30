@@ -9,7 +9,7 @@ const SingleProduct = ({prod}) => {
     state: {cart},
     dispatch,
   } = CartState();
-
+  // console.log(cart);
   return (
     <div className='SingleProduct'>
       <Card>
@@ -29,14 +29,27 @@ const SingleProduct = ({prod}) => {
         <br/>
         {
           cart.some(p => p.id===prod.id)? (
-            <Button variant="danger">Remove from cart</Button>
+            <Button
+            onClick={ () => {
+              dispatch({
+                type: "REMOVE_FROM_CART",
+                payload: prod,
+              });
+            }}
+             variant="danger">Remove from cart</Button>
           ):(
-
-          )
-        }
-        <Button disabled={!prod.inStock}>
+            <Button 
+            onClick={ () => {
+              dispatch({
+                type: "ADD_TO_CART",
+                payload: prod,
+              });
+            }} 
+            disabled={!prod.inStock}>
           {prod.inStock ? "Add to cart" : "Out of stock"}
         </Button>
+          )
+        }
         
       </Card.Body>
     </Card>

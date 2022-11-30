@@ -5,7 +5,7 @@ import Rating from './Rating';
 const Filters = () => {
     const [rate, setRate] = useState(2)
   return (
-    <div className="filters">
+    <div className="filters bg-dark-green">
         <span className="title">Filter Products</span>
             <span>
                 <Form.Check

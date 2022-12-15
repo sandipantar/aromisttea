@@ -73,36 +73,7 @@ const Header = (props) => {
                 </Container>
 </Navbar>
             ): (
-                // <Navbar id='scrollNav' bg="transparent" expand="lg" style={{borderBottom:'1px solid #ffffff52', boxShadow:'0 1px #888'}}>
-                // <Container fluid className="navstyle ">
-                //     <Navbar.Brand className="navbrand" href="/"><img className="img-fluid logo" src={logo}/></Navbar.Brand>
-                //     <Navbar.Toggle aria-controls="" />
-                //     <Navbar.Collapse id="">
-                    
-                //     <Nav
-                //         className=" justify-content-end text-center"
-                //         style={{ maxHeight: '350px', width:'100%'}}
-                //         >
-                //         <Nav.Link className='text-white' href="/">Home</Nav.Link>
-                //         <Nav.Link className='text-white' href="/about">About Us</Nav.Link>
-                //         <Nav.Link className='text-white' href="/OrderFoodAt">Fooddff at Station</Nav.Link>
-                //         <Nav.Link className='text-white' href="/#blog_stories">Stories</Nav.Link>
-                //         {/* <NavDropdown title="Courses" id="navbarScrollingDropdown">
-                //             <NavDropdown.Item className='text-white' href="/OrderFood-at">IDE Course</NavDropdown.Item>
-                //             <NavDropdown.Item className='text-white' href="/IDECourse">DiaTech (Basic)</NavDropdown.Item>
-                //          <NavDropdown.Divider />
-                //             <NavDropdown.Item className='text-white' href="#action5">
-                //             Something else here
-                //          </NavDropdown.Item>
-                //         </NavDropdown> */}
-                //         {/* <Nav.Link className='text-white' href="/#contact">Contact</Nav.Link> */}
-                //         <Nav.Link className='text-white' href="/login">Login</Nav.Link>
-                //         {/* <Nav.Link className='text-white' href="/register">Register</Nav.Link> */}
-                //     </Nav>
-                //     </Navbar.Collapse>
-                // </Container>
-                // </Navbar>
-                <Navbar bg="light" expand="lg">
+                <Navbar bg="transparent" expand="lg">
                     <Container fluid>
                         <Navbar.Brand href="#">
                             <img src={logo} width='80px'/>
@@ -110,14 +81,14 @@ const Header = (props) => {
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                         <Nav
-                            className="me-auto my-2 my-lg-0"
+                            className="me-auto my-lg-0"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="#action1">Home</Nav.Link>
-                            <Nav.Link href="#action2">Link</Nav.Link>
-                            <NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                            <Nav.Link className="text-dark-green" href="#action1">Home</Nav.Link>
+                            <Nav.Link className="text-dark-green" href="#action2">About Us</Nav.Link>
+                            <NavDropdown className="text-dark-green" title="Products" id="navbarScrollingDropdown">
+                            <NavDropdown.Item className="text-dark-green" href="#action3">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
                                 Another action
                             </NavDropdown.Item>
@@ -126,28 +97,22 @@ const Header = (props) => {
                                 Something else here
                             </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="#" disabled>
-                            Link
+                            <Nav.Link className="text-dark-green" href="#">
+                            Contact Us
                             </Nav.Link>
                         </Nav>
-                        {/* <Navbar.Text classname="search">
-                             <FormControl 
-                                 className='m-auto'
-                                 style={{width:'500'}}
-                                 placeholder='Search your product'
-                             />
-                         </Navbar.Text> */}
+                        
                         <Form className="d-flex">
                             <Form.Control
                             type="search"
                             placeholder="Search Your Product"
-                            className="me-2"
+                            className="rounded-pill shadow pl-3 p-2 me-2 border-light-green"
                             aria-label="Search"
                             />
                         </Form>
                         <Nav>
                          <Dropdown>
-                             <Dropdown.Toggle variant="success">
+                             <Dropdown.Toggle className="rounded-pill" variant="success">
                                  {/* <i class="fa fa-shopping-bag" aria-hidden="true"></i> */}
                                  <FaShoppingCart color='white' fontSize="20px"/>
                                  <Badge> {cart.length}</Badge>
@@ -200,55 +165,6 @@ const Header = (props) => {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-                // <Navbar bg="dark" variant='dark'>
-                //     <Container fluid>
-                //         <Navbar.Brand href="#">Aromist Tea</Navbar.Brand>
-                //         <Navbar.Toggle aria-controls="navbarScroll" />
-                //         <Navbar.Collapse id="navbarScroll">
-                //         <Nav>
-                //             <Nav.Link href="#action1">Home</Nav.Link>
-                //             <Nav.Link href="#action2">Link</Nav.Link>
-                //             <NavDropdown title="Link" id="navbarScrollingDropdown">
-                //             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                //             <NavDropdown.Item href="#action4">
-                //                 Another action
-                //             </NavDropdown.Item>
-                //             <NavDropdown.Divider />
-                //             <NavDropdown.Item href="#action5">
-                //                 Something else here
-                //             </NavDropdown.Item>
-                //             </NavDropdown>
-                //             <Nav.Link href="#" disabled>
-                //             Link
-                //             </Nav.Link>
-                //         </Nav>
-                //         <div className='me-auto'>
-                //         <Navbar.Text classname="search">
-                //             <FormControl 
-                //                 className='m-auto'
-                //                 style={{width:'500'}}
-                //                 placeholder='Search your product'
-                //             />
-                //         </Navbar.Text>
-                //         <Nav>
-                //         <Dropdown alignright>
-                //             <Dropdown.Toggle variant="success" id="dropdown-basic">
-                //                 {/* <i class="fa fa-shopping-bag" aria-hidden="true"></i> */}
-                //                 <FaShoppingCart color='white' fontSize="25px"/>
-                //                 <badge> {10}</badge>
-                //             </Dropdown.Toggle>
-
-                //             <Dropdown.Menu>
-                //                 <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                //                 <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                //                 <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                //             </Dropdown.Menu>
-                //         </Dropdown>
-                //         </Nav>
-                //         </div>
-                //         </Navbar.Collapse>
-                //     </Container>
-                // </Navbar>
             )
         }
         </>

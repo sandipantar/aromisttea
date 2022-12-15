@@ -6,9 +6,9 @@ import { fetchStation,fetchMenu,fetchRestaurant,fetchPnr ,fetchBlog} from "../..
 import timg from '../../images/travelintrain.jpeg';
 import imgabout from '../../images/newsletter.png';
 import stationimg from '../../images/njp.jpg';
-import banner from '../../images/banner1.png';
+import banner from '../../../img/home_shop.png';
 import { Card, Container, Row, Button, Modal, Col,FormControl,Form,InputGroup,Accordion } from 'react-bootstrap-v5';
-import '../../css/style.css';
+import '../../../css/style.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SelectStations from 'react-select';
@@ -100,16 +100,18 @@ const Home = (props) => {
 
         <>
        
-        <Container fluid style={{paddingLeft:'0',paddingRight:'0'}}>
-            <Row className="banner-row pb-5 bg-primary hero-header mb-5">
-        <Header/>
-            <Row>
-                <Col className="banner-body my-auto" md={5}>
-                    <h4>Order food in train online from your seat FSSAI & 
-                        IRCTC approved restaurants Zero Booking Fee
-                        
-                    </h4>
-                    <InputGroup className="mb-3">
+        
+            <div className="banner-bg" style={{height:'990px'}}>
+            <Header/>
+            <Row className="v-center">
+                <Col className="float-left banner-body text-dark-green top-div text-left" md={5}>
+                    {/* <h6 className="text-danger py-3">@AromistTea</h6> */}
+                    <h1 className="py-2">Great Start Your Morning</h1>
+                    <h6 className="py-4">Tea and Tea Oriented Product Supplier<br/>
+                    Give optimum satisfaction to your taste buds</h6>
+                    <Button className="bg-light-green border-light-green rounded-pill" variant="success"> Search Your Tea</Button>
+                    {/* <div>
+                    <InputGroup>
                         <FormControl
                         className="py-3 rounded-pill"
                         placeholder={text}
@@ -121,70 +123,23 @@ const Home = (props) => {
                         <Button className="pnrSearchButton py-2 rounded-pill my-auto" variant="outline-warning" id="button-addon2" style={{zIndex:'999'}} href="/OrderFoodPNR" onClick={e => handleSearch(searchPNR,e)}>
                         <i className="fa fa-search"></i>
                         </Button>
-                        {/* href="/OrderFoodPNR" */}
                     </InputGroup>
+                    </div> */}
                 </Col>
                 <Col className="" md={7}>
-                    <img className="img-fluid" src={banner} />
+                
+                    {/* <img className="img-fluid" src={banner} /> */}
                 </Col>
-            </Row><br/>
             </Row>
-            {/* Steps how to order */}
             <Row>
-              <h2 className="text-center pb-4">How To Get Your Food</h2>
-              <Col md={3} data-wow-delay="0.1s">
-                        <div className="service-item py-2 d-flex flex-column justify-content-center text-center bg-area bg-danger rounded-edge">
-                            <div className="service-icon flex-shrink-0">
-                                {/* <i className="fa fa-home "></i> */}
-                                {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn3.iconfinder.com/data/icons/map-navigation-8/512/z5-map-location-pin-512.png" width="75px"/>
-                            </div>
-                            <h5 className="mb-3">Choose Your Delivery Location</h5>
-                        </div>
-                </Col>
-                <Col md={3} data-wow-delay="0.1s">
-                        <div className="service-item py-2 d-flex flex-column justify-content-center text-center bg-area bg-warning rounded-edge">
-                            <div className="service-icon flex-shrink-0">
-                                {/* <i className="fa fa-home "></i> */}
-                                {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn4.iconfinder.com/data/icons/february/64/store-locator-512.png" width="85px"/>
-                            </div>
-                            <h5 className="mb-3">Select A Restaurant</h5>
-                        </div>
-                </Col>
-                <Col md={3} data-wow-delay="0.1s">
-                        <div className="service-item py-2 d-flex flex-column justify-content-center text-center bg-area bg-info rounded-edge">
-                            <div className="service-icon flex-shrink-0">
-                                {/* <i className="fa fa-home "></i> */}
-                                {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn2.iconfinder.com/data/icons/food-delivery-wildberry-vol-2/256/Pay_Online-512.png" width="85px"/>
-                            </div>
-                            <h5 className="mb-3">Pay Online or Cash</h5>
-                        </div>
-                </Col>
-                <Col md={3} data-wow-delay="0.1s">
-                        <div className="service-item py-2 d-flex flex-column justify-content-center text-center bg-area bg-success rounded-edge">
-                            <div className="service-icon flex-shrink-0">
-                                {/* <i className="fa fa-home "></i> */}
-                                {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn3.iconfinder.com/data/icons/restaurant-2-3-1/300/diner--serve-3-food-meal-drink-512.png" width="85px"/>
-                            </div>
-                            <h5 className="mb-3">Deliver At Your Seat</h5>
-                        </div>
-                </Col>
             </Row>
-            {/* Steps how to order */}
-            {/* Types Of Foods*/}
-            <div className='show-food bg-primary rounded-edge py-5 my-5'>
-                <Container className="pt-4 rounded-edge">
-                <h3 className='text-uppercase fw-bold text-white text-center'>Food What You Like</h3>
-                      
-                        <Carousel responsive={responsive} infinite={true}>
-                        {
-                    menu.map(usr =>
-                            <div className='m-2' key={usr._id}>
+            <Container className="position">
+            <Carousel responsive={responsive} infinite={true}>
+                        {/* {
+                    menu.map(usr => */}
+                            <div className='m-2' >
                               <Card className='rounded'>
-                              <Card.Header className="text-center" as="h5">{usr.category} </Card.Header>
+                              <Card.Header className="text-center" as="h5">ascascasc </Card.Header>
                                 <Card.Img variant="top" className="opacity-100" src="https://www.zoopindia.com/assets/images/products/biryani.webp?w=384&q=75" height="184px" />
                                 <Card.Footer>
                                   <small className="text-center d-flex justify-content-center">
@@ -193,139 +148,120 @@ const Home = (props) => {
                                 </Card.Footer>
                               </Card>
                             </div>
-                             )
-                            }
+                             {/* )
+                            } */}
                         </Carousel>
-                </Container>
-                </div>
-            {/* Types Of Foods*/}  
-            {/* More Services */}
-            <Row>
-              <h2 className="text-center py-4">More Services</h2>
-              <Col className="p-0">
-                        <div className="service-item-more py-2 d-flex flex-column justify-content-center text-center border border-2 bg-area rounded-edge">
-                            <div className="service-icon-more flex-shrink-0">
+            </Container>
+            </div>
+            {/* about aromist*/}
+            <div className="hero-header bg-light-green rounded-edge ">
+            <Container>
+              <Row>
+                <Col md={5} className="my-auto">
+                <h2 className="text-white text-left pt-4 pb-2">Aromist Could be your Daily Aroma</h2>
+                <h6 className='text-white'>Lean into that problem translating our vision of having a market leading platform. Commitment data-point high performance</h6>
+                <Col md={6} sm={6} className="float-left mb-4" data-wow-delay="0.1s">
+                        <div className="service-item py-2 d-flex flex-column justify-content-center text-center bg-area bg-danger rounded-edge">
+                            <div className="service-icon flex-shrink-0">
                                 {/* <i className="fa fa-home "></i> */}
                                 {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn2.iconfinder.com/data/icons/food-delivery-wildberry-vol-1/256/Group_Order-512.png" width="75px"/>
+                                <img src="https://cdn3.iconfinder.com/data/icons/map-navigation-8/512/z5-map-location-pin-512.png" width="75px"/>
                             </div>
-                            <h5 className="mb-3 text-dark">Group Order</h5>
+                            <h6 className="mb-3">Fresh Tea </h6>
                         </div>
                 </Col>
-                <Col className="p-0">
-                        <div className="service-item-more py-2 d-flex flex-column justify-content-center text-center border border-2 bg-area rounded-edge">
-                            <div className="service-icon-more flex-shrink-0">
+                <Col md={6} sm={6} className="float-left mb-4" data-wow-delay="0.1s">
+                        <div className="service-item py-2 d-flex flex-column justify-content-center text-center bg-area bg-warning rounded-edge">
+                            <div className="service-icon flex-shrink-0">
                                 {/* <i className="fa fa-home "></i> */}
                                 {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn4.iconfinder.com/data/icons/train-station-color/100/Train_station-12-512.png" width="75px"/>
+                                <img src="https://cdn4.iconfinder.com/data/icons/february/64/store-locator-512.png" width="85px"/>
                             </div>
-                            <h5 className="mb-3 text-dark">PNR Check</h5>
+                            <h6 className="mb-3">Live Traking</h6>
                         </div>
                 </Col>
-                <Col className="p-0">
-                        <div className="service-item-more py-2 d-flex flex-column justify-content-center text-center border border-2 bg-area rounded-edge">
-                            <div className="service-icon-more flex-shrink-0">
+                <p></p>
+                <Col md={6} sm={6} className="float-left" data-wow-delay="0.1s">
+                        <div className="service-item py-2 d-flex flex-column justify-content-center text-center bg-area bg-info rounded-edge">
+                            <div className="service-icon flex-shrink-0">
                                 {/* <i className="fa fa-home "></i> */}
                                 {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn4.iconfinder.com/data/icons/train-station-color/100/Train_station-10-512.png" width="85px"/>
+                                <img src="https://cdn2.iconfinder.com/data/icons/food-delivery-wildberry-vol-2/256/Pay_Online-512.png" width="85px"/>
                             </div>
-                            <h5 className="mb-3 text-dark">Platform Locator</h5>
+                            <h6 className="mb-3">Fastest Delivery </h6>
                         </div>
                 </Col>
-                <Col className="p-0">
-                        <div className="service-item-more py-2 d-flex flex-column justify-content-center text-center border border-2 bg-area rounded-edge">
-                            <div className="service-icon-more flex-shrink-0">
+                <Col md={6} sm={6} className="float-left" data-wow-delay="0.1s">
+                        <div className="service-item py-2 d-flex flex-column justify-content-center text-center bg-area bg-success rounded-edge">
+                            <div className="service-icon flex-shrink-0">
                                 {/* <i className="fa fa-home "></i> */}
                                 {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn4.iconfinder.com/data/icons/train-station-color/100/Train_station-18-512.png" width="85px"/>
+                                <img src="https://cdn3.iconfinder.com/data/icons/restaurant-2-3-1/300/diner--serve-3-food-meal-drink-512.png" width="85px"/>
                             </div>
-                            <h5 className="mb-3 text-dark">Train Schedule</h5>
+                            <h6 className="mb-3">Low Cost Delivery</h6>
                         </div>
                 </Col>
-                <Col className="p-0">
-                        <div className="service-item-more py-2 d-flex flex-column justify-content-center text-center border border-2 bg-area rounded-edge">
-                            <div className="service-icon-more flex-shrink-0">
-                                {/* <i className="fa fa-home "></i> */}
-                                {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn4.iconfinder.com/data/icons/train-station-color/100/Train_station-22-512.png" width="85px"/>
-                            </div>
-                            <h5 className="mb-3 text-dark">Coach Position</h5>
-                        </div>
                 </Col>
-                <Col className="p-0">
-                        <div className="service-item-more py-2 d-flex flex-column justify-content-center text-center border border-2 bg-area rounded-edge">
-                            <div className="service-icon-more flex-shrink-0">
-                                {/* <i className="fa fa-home "></i> */}
-                                {/* <i className="fa fa-street-view fa-2x" aria-hidden="true"></i> */}
-                                <img src="https://cdn0.iconfinder.com/data/icons/logistic-delivery-1-5/128/35-512.png" width="85px"/>
-                            </div>
-                            <h5 className="mb-3 text-dark">Helpline</h5>
-                        </div>
+                <Col md={7}>
+                    <img className="img-fluid" src={banner} />
+                    <Button className="bg-light-green border-light-green rounded-pill" style={{marginLeft:'50%'}}> Search Your Tea</Button>
                 </Col>
-            </Row>
-            {/* More Services */}
-            </Container><br/>
-            {/* Search and select stations*/}
-              <div className='station-search bg-color text-primary py-5 my-5'>
+              </Row>
+              </Container>  
+            </div>
+            {/* <Container fluid> */}
+            {/* about aromist*/}
+            {/* Types Of Foods*/}
+            <div className='show-food bg-primary rounded-edge py-5 my-5'>
                 <Container className="pt-4 rounded-edge">
-                        <Row className="px-2">
-                                {/* <span className="fs-2 fw-bolder text-center p-4">Search Stations</span> */}
-                            <Col>
-                                <h3 className='text-uppercase fw-bold text-center'>Famous Railway Stations</h3>
-                                </Col>
-                            <Col md={6}>
-                                <SelectStations options={stations} />
-                            </Col>
-                        </Row>
+                <h3 className='text-uppercase fw-bold text-white text-center'>Food What You Like</h3>
                       
                         <Carousel responsive={responsive} infinite={true}>
-                        {
-                    station.map(usr =>
-                            <div className='m-2' key={usr._id}>
-                              <Card className='opacity-80 rounded'>
-                                <Card.Img variant="top" className="opacity-100" src={stationimg} height="184px" />
-                                <Card.Body>
-                                  <Card.Title className='text-center'>{usr.stationName}</Card.Title>
-                                
-                                </Card.Body>
+                        {/* {
+                    menu.map(usr => */}
+                            <div className='m-2' >
+                              <Card className='rounded'>
+                              <Card.Header className="text-center" as="h5">ascascasc </Card.Header>
+                                <Card.Img variant="top" className="opacity-100" src="https://www.zoopindia.com/assets/images/products/biryani.webp?w=384&q=75" height="184px" />
                                 <Card.Footer>
                                   <small className="text-center d-flex justify-content-center">
-                                  <Button className=' w-100' variant="outline-primary" href="/OrderFoodAt"
-                                  onClick={(e) => {clickRestaurantDtl(usr.stationName,usr.code)}}>View Restaurants</Button>
+                                  <Button className=' w-100' variant="outline-primary" href="/OrderFoodAt">View Restaurants</Button>
                                     </small>
                                 </Card.Footer>
                               </Card>
                             </div>
-                             )
-                            }
+                             {/* )
+                            } */}
                         </Carousel>
                 </Container>
                 </div>
-            {/* Search and select stations*/} 
-            {/* resgiter restaurant owner*/}
+            {/* Types Of Foods*/} 
+            {/* </Container><br/>  */}
+            {/* aromist promo*/}
             <div className="container-xxl bg-primary newsletter bg-area my-5 wow fadeInUp" data-wow-delay="0.1s" style={{visibility: 'visible', animationDelay: '0.1s', animationName: 'fadeInUp'}}>
             <div className="container px-lg-5">
-                <div className="row align-items-center" style={{height: '250px'}}>
-                    <div className="mb-5 col-12 col-md-6">
-                        <h3 className="text-white">ARE YOU A RESTAURANT OWNER?</h3>
-                        <small className="text-white">Take your business online with IRCTC e-Catering. Become an authorized vendor for train food order delivery and expand your business.</small>
+                <div className="row align-items-center">
+                    <div className="my-5 col-12 col-md-6">
+                        <h3 className="text-white">Aromist Tea Offer People Best Way to Sip Fresh Tea</h3>
+                        <small className="text-white">Lean into that problem translating our vision of having a market leading platform. Commitment data-point high performance</small>
                         <Col className="">
                             <div>
-                                <Button className="mt-3" variant="info">
-                              <a href="/vendorRegister" >
-                                SIGN UP AS PARTNER
+                                <Button className="bg-light-green mt-3" style={{marginLeft:'30%'}}>
+                              {/* <a href="/vendorRegister" > */}
+                              <a href="/products" className=" text-decoration-none text-white" >
+                                See More
                               </a>
                               </Button>
                               </div>
                             </Col>
                     </div>
-                    <div className="col-md-6 text-center mb-n5 d-none d-md-block">
-                        <img className="img-fluid mt-5" style={{height: '250px'}} src={imgabout}/>
+                    <div className="col-md-6 text-center d-md-block">
+                        <img className="img-fluid"  src={imgabout}/>
                     </div>
                 </div>
             </div>
             </div> 
-            {/* resgiter restaurant owner*/} 
+            {/* aromist promo*/} 
             {/* blog */}
             <Container id="blog_stories">
             <h2 className="text-center py-4">LATEST TRAVEL & FOOD STORIES</h2>

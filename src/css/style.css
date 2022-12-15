@@ -1,3 +1,20 @@
+/* banner */
+.position{
+    margin-top: 10%;
+}
+.top-div{
+    padding-left: 55px !important;
+}
+@media screen and (max-width: 495px){
+	.position{
+        margin-top: 50%;
+    }
+    .top-div{
+        padding-left: 30px !important;
+    }
+    
+}
+/* banner */
 /* base color */
 .bg-golden{
     background-color: #d08729 !important;
@@ -16,6 +33,27 @@
 }
 .text-dark-green{
     color: #253831 !important;
+}
+.border-light-green{
+    border-color: #33ad6a !important;
+}
+.banner-bg{
+    background-image: url(../img/banner_tea_ecomm.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.v-center{
+    margin: 0;
+  /* position: absolute; */
+  top: 50;
+  transform: translateY(20%);
+  -webkit-transform: translateY(20%);
+
 }
 /* base color */
 
@@ -42,7 +80,7 @@
     width: 50%;
 }
 /* checkout */
-/* cart style */
+
 /* manual_dropDown */
 .dropdown-menu-right {
     width: 330px !important;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Navigate } from 'react-router-dom';
 import { Form, Card,Row,Col } from "react-bootstrap-v5";
- import { loginUser } from "../../../crud/common.crud";
+ import { loginUser } from "../../crud/common.crud";
 
 const VendorLogin = () => {
         

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { Navigate } from 'react-router-dom';
-import {  createBlog } from "../../../crud/common.crud";
+import {  createBlog } from "../../crud/common.crud";
 import { Card,Container,Row,Form,Modal,Button } from 'react-bootstrap-v5';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

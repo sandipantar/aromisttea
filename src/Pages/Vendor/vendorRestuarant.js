@@ -2,7 +2,7 @@
 import { Navigate } from 'react-router-dom';
 import Header from '../../Pages/Vendor/Headers/Header';
 import Topnav from '../../Pages/Vendor/Headers/Topnav';
-import { fetchRestaurant,fetchStation, createRestaurant,editRestaurant, deleteRestaurant } from "../../../crud/common.crud";
+import { fetchRestaurant,fetchStation, createRestaurant,editRestaurant, deleteRestaurant } from "../../crud/common.crud";
 import { Card,Container,Row,Form,Modal,Button } from 'react-bootstrap-v5';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

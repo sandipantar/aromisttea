@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../Pages/Vendor/Headers/Header';
-import { fetchRestaurant,fetchMenu, createMenu,editMenu, deleteMenu,fetchCat} from "../../../crud/common.crud";
+import { fetchRestaurant,fetchMenu, createMenu,editMenu, deleteMenu,fetchCat} from "../../crud/common.crud";
 import { Navigate } from 'react-router-dom';
 import { Card,Container,Row,Form,Modal,Button,Col } from 'react-bootstrap-v5';
 // import 'bootstrap/dist/css/bootstrap.min.css';

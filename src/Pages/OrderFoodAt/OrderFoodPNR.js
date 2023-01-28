@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../Header/Header';
-import Footer from '../../Header/footer';
-import LabelFood from '../../images/label-pack-demo.png';
-import stationImage from '../../images/AGC.webp';
-import biriyani from '../../images/biriyani.jpeg';
-import dish1 from '../../images/dish1.jpeg';
-import dish2 from '../../images/dish2.jpeg';
-import {fetchStation, fetchStationEmail,fetchRestaurant,fetchRestaurantStationCode,fetchPnr } from "../../../crud/common.crud";
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Header/footer';
+import LabelFood from '../../img/label-pack-demo.png';
+import stationImage from '../../img/AGC.webp';
+import biriyani from '../../img/biriyani.jpeg';
+import dish1 from '../../img/dish1.jpeg';
+import dish2 from '../../img/dish2.jpeg';
+import {fetchStation, fetchStationEmail,fetchRestaurant,fetchRestaurantStationCode,fetchPnr } from "../../crud/common.crud";
 import { Card, Container, Row, Button, Modal, Col, i,Badge } from 'react-bootstrap-v5';
 import '../../css/style.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import stationimg from '../../images/njp.jpg';
+import stationimg from '../../img/njp.jpg';
 
 const GoToTop = () => {var mybutton = document.getElementById("myBtn");
 

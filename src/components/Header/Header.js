@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../../img/AROMIST_LOGO.png'
-import '../css/style.css';
 import { Nav, Form, FormControl, Button, Navbar, Container, NavDropdown,navbarScroll, Badge, Dropdown, Toast, DropdownButton } from "react-bootstrap-v5";
-import '../css/style.css';
+import '../../css/style1.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { CartState } from '../../context/Context';
 import { AiFillDelete } from 'react-icons/ai';

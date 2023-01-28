@@ -2,23 +2,23 @@
   right: 48px;
 }
 .hero-header {
-    background: url(../images/bg-dot.png), url(../images/bg-dot.png), url(../images/bg-round.png), url(../images/bg-tree.png), url(../images/bg-bottom-hero.png);
+    background: url(../img/bg-dot.png), url(../img/bg-dot.png), url(../img/bg-round.png), url(../img/bg-tree.png), url(../img/bg-bottom-hero.png);
     background-position: 10px 10px, bottom 190px right 10px, left 55% top -1px, left 55% bottom -1px, center bottom -1px;
     background-repeat: no-repeat;
 }
 .show-food{
-    background:  url(../images/bg-dot.png), url(../images/bg-dot.png), url(../images/bg-round.png), url(../images/bg-tree.png);
+    background:  url(../img/bg-dot.png), url(../img/bg-dot.png), url(../img/bg-round.png), url(../img/bg-tree.png);
     background-position: 10px 10px, bottom 190px right 0px, left 55% top -1px, left 55% bottom -1px, center bottom -1px;
     background-repeat: no-repeat;
 }
 .station-search{
-    background: url(../images/bg-top-hero.png), url(../images/bg-dot.png), url(../images/bg-dot.png), url(../images/rail_at_station.png);
+    background: url(../img/bg-top-hero.png), url(../img/bg-dot.png), url(../img/bg-dot.png), url(../img/rail_at_station.png);
     background-position: 1px 140px, bottom 190px right 10px, left 55% top 10px, left 45% bottom -1px, center bottom -1px;
     padding-bottom: 170px !important;
     background-repeat: no-repeat;
 }
 .bg-area{
-    background: url(../images/bg-top.png), url(../images/bg-bottom.png), #0debb1;
+    background: url(../img/bg-top.png), url(../img/bg-bottom.png), #0debb1;
     background-position: left top, right bottom;
     background-repeat: no-repeat;
 }
@@ -55,13 +55,13 @@
     align-items: center;
     justify-content: center;
     /* color: var(--light); */
-    background: url(../images/icon-shape-primary.png) center center no-repeat;
+    background: url(../img/icon-shape-primary.png) center center no-repeat;
     transition: .5s;
 }
 
 .service-item:hover .service-icon {
     
-    background: url(../images/icon-shape-white.png);
+    background: url(../img/icon-shape-white.png);
 }
 
 .service-item-more {
@@ -86,13 +86,13 @@
     align-items: center;
     justify-content: center;
     /* color: var(--light); */
-    background: url(../images/icon-shape-white.png) center center no-repeat;
+    background: url(../img/icon-shape-white.png) center center no-repeat;
     transition: .5s;
 }
 
 /* .service-item-more:hover .service-icon-more {
     
-    background: url(../images/icon-shape-white.png);
+    background: url(../img/icon-shape-white.png);
 } */
 
 .service-item h5,
@@ -142,7 +142,7 @@
  /* reg_owner */
  /* Footer */
 .footer {
-    background: url(../images/footer.png) center center no-repeat;
+    background: url(../img/footer.png) center center no-repeat;
     background-size: contain;
 }
 
@@ -233,12 +233,12 @@
 }
 .label-bg{
     background-color: #81deea;
-    background-image: url(../images/clouds.png);
+    background-image: url(../img/clouds.png);
     height: 200px;
 }
 .restaurant-bg{
     background-color: #81deea;
-    /* background-image: url(../images/clouds.png); */
+    /* background-image: url(../img/clouds.png); */
     height: 20px;
 }
 .label-food{
@@ -262,7 +262,7 @@
     /* background-color: #8AAAE5; */
 }
 .banner{
-    /* background-image: url(../images/banner1.png); */
+    /* background-image: url(../img/banner1.png); */
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;

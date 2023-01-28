@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../Header/Header';
-import Footer from '../../Header/footer';
-// import { fetchCourses } from "../../../crud/common.crud";
-import { fetchStation,fetchMenu,fetchRestaurant,fetchPnr ,fetchBlog} from "../../../crud/common.crud";
-import timg from '../../images/travelintrain.jpeg';
-import imgabout from '../../images/newsletter.png';
-import stationimg from '../../images/njp.jpg';
-import banner from '../../../img/home_shop.png';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Header/footer';
+// import { fetchCourses } from "../../crud/common.crud";
+import { fetchStation,fetchMenu,fetchRestaurant,fetchPnr ,fetchBlog} from "../../crud/common.crud";
+import timg from '../../img/travelintrain.jpeg';
+import imgabout from '../../img/newsletter.png';
+import stationimg from '../../img/njp.jpg';
+import banner from '../../img/home_shop.png';
 import { Card, Container, Row, Button, Modal, Col,FormControl,Form,InputGroup,Accordion } from 'react-bootstrap-v5';
-import '../../../css/style.css';
+import '../../css/style.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SelectStations from 'react-select';
@@ -133,6 +133,7 @@ const Home = (props) => {
             </Row>
             <Row>
             </Row>
+            {/* carousel */}
             <Container className="position">
             <Carousel responsive={responsive} infinite={true}>
                         {/* {
@@ -140,7 +141,7 @@ const Home = (props) => {
                             <div className='m-2' >
                               <Card className='rounded'>
                               <Card.Header className="text-center" as="h5">ascascasc </Card.Header>
-                                <Card.Img variant="top" className="opacity-100" src="https://www.zoopindia.com/assets/images/products/biryani.webp?w=384&q=75" height="184px" />
+                                <Card.Img variant="top" className="opacity-100" src="https://www.zoopindia.com/assets/img/products/biryani.webp?w=384&q=75" height="184px" />
                                 <Card.Footer>
                                   <small className="text-center d-flex justify-content-center">
                                   <Button className=' w-100' variant="outline-primary" href="/OrderFoodAt">View Restaurants</Button>
@@ -152,6 +153,7 @@ const Home = (props) => {
                             } */}
                         </Carousel>
             </Container>
+            {/* carousel */}
             </div>
             {/* about aromist*/}
             <div className="hero-header bg-light-green rounded-edge ">
@@ -222,7 +224,7 @@ const Home = (props) => {
                             <div className='m-2' >
                               <Card className='rounded'>
                               <Card.Header className="text-center" as="h5">ascascasc </Card.Header>
-                                <Card.Img variant="top" className="opacity-100" src="https://www.zoopindia.com/assets/images/products/biryani.webp?w=384&q=75" height="184px" />
+                                <Card.Img variant="top" className="opacity-100" src="https://www.zoopindia.com/assets/img/products/biryani.webp?w=384&q=75" height="184px" />
                                 <Card.Footer>
                                   <small className="text-center d-flex justify-content-center">
                                   <Button className=' w-100' variant="outline-primary" href="/OrderFoodAt">View Restaurants</Button>
